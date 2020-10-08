@@ -1,0 +1,63 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+steks<int> ielikt(steks<int> steks)
+{
+    for (int i = 0; i < 5; i++)
+    {
+        steks.push(i);
+    }
+    return steks;
+}
+
+steks<int> nonemt(steks<int> steks)
+{
+    cout << "Pop: ";
+
+    for (int i = 0; i < 5; i++)
+    {
+        int a = (int)steks.top();
+        steks.pop();
+        cout << (a) << endl;
+    }
+    return steks;
+}
+
+void paskatities(steks<int> steks)
+{
+    int el = (int)steks.top();
+    cout << "steka top element: " << el << endl;
+}
+
+void searchStack(steks<int> steks, int el)
+{
+    int pos = -1,co = 0;
+    while(steks.size() > 0)
+    {
+        co++;
+        if(steks.top() == el)
+        {
+            pos = co;
+            break;
+        }
+        steks.pop();
+    }
+
+    if (pos == -1)
+        cout << "Element not found" << endl;
+    else
+        cout << "Element is at position: " << pos << endl;
+}
+
+int main()
+{
+    steks<int> steks ;
+
+    steks = ielikt(steks);
+    steks = nonemt(steks);
+    steks = ielikt(steks);
+    paskatities(steks);
+    searchStack(steks, 2);
+    searchStack(steks, 6);
+    return 0;
+}

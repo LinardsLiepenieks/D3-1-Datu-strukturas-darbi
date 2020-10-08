@@ -1,0 +1,44 @@
+package selection.sort.java;
+
+
+public class SelectionSortJava {
+
+    
+    void selecSort(int masivs[])
+    {
+        int n = masivs.length;
+ 
+        for (int i = 0; i < n - 1; i++)
+        {
+            int minimum = i;
+            
+            for (int p = i+1; p < n; p++)
+            {
+                if (masivs[p] < masivs[minimum])
+                    minimum = p;
+            }
+            
+            int temp = masivs[minimum];
+            masivs[minimum] = masivs[i];
+            masivs[i] = temp;
+        }
+    }
+ 
+    // Prints the array
+    void print(int masivs[])
+    {
+        int n = masivs.length;
+        for (int i=0; i<n; ++i)
+            System.out.print(masivs[i]+" ");
+        System.out.println();
+    }
+    
+    public static void main(String[] args) {
+        SelectionSortJava ob = new SelectionSortJava();
+        int masivs[] = {64,25,12,22,11};
+        ob.selecSort(masivs);
+        System.out.println("Sorted array: ");
+        ob.print(masivs);
+    }
+    
+}

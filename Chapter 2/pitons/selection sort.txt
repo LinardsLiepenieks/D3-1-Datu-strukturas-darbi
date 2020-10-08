@@ -1,0 +1,16 @@
+
+import sys
+masivs = [64, 25, 12, 22, 11] 
+  
+for i in range(len(masivs)): 
+      
+    mazakais = i 
+    for j in range(i+1, len(masivs)): 
+        if masivs[mazakais] > masivs[j]: 
+            min_idx = j 
+                       
+    masivs[i], masivs[mazakais] = masivs[mazakais], masivs[i] 
+  
+print ("Sorted array") 
+for i in range(len(masivs)): 
+    print("%d" %masivs[i]),

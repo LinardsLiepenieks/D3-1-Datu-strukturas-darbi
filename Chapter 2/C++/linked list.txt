@@ -1,0 +1,39 @@
+#include <iostream>
+
+class Node {
+public:
+    int dati;
+    Node* nak;
+};
+
+void printList(Node* a)
+{
+    while (a != NULL) {
+        std::cout << a->dati << " ";
+        a = a->nak;
+    }
+}
+
+int main()
+{
+    Node* head = NULL;
+    Node* sec = NULL;
+    Node* third = NULL;
+
+    head = new Node();
+    sec = new Node();
+    third = new Node();
+
+    head->dati = 1;
+    head->nak = sec;
+
+    sec->dati = 2;
+    sec->nak = third;
+
+    third->dati = 3;
+    third->nak = NULL;
+
+    printList(head);
+
+    return 0;
+}

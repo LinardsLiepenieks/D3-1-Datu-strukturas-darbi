@@ -1,0 +1,29 @@
+class Node: 
+  
+    def __init__(self, dati): 
+        self.dati = dati
+        self.nak = None
+  
+class LinkedList: 
+  
+    def __init__(self): 
+        self.head = None
+  
+    def printl(self): 
+        temp = self.head 
+        while (temp): 
+            print(temp.dati) 
+            temp = temp.nak
+   
+if __name__=='__main__': 
+  
+    list = LinkedList() 
+  
+    list.head = Node(1) 
+    sec = Node(2) 
+    third = Node(3) 
+  
+    list.head.nak = sec; 
+    sec.nak = third;
+  
+    list.printl() 

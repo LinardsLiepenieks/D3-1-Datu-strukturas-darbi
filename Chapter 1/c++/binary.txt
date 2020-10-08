@@ -1,0 +1,33 @@
+#include <iostream>
+
+int main()
+{
+    int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, zemais = 0, augstais = 9, vidus;
+    int poz, guess;
+    std::cout << "Your number (between 1 and 10):";
+    std::cin >> poz;
+
+    if (poz < 1 || poz > 10)
+        return 0;
+
+    while (zemais <= augstais)
+    {
+        vidus = (zemais + augstais) / 2;
+        guess = arr[vidus];
+
+        if (guess == poz)
+            break;
+
+        if (guess < poz)
+            zemais = vidus + 1;
+
+        else
+            augstais = vidus - 1;
+    }
+
+    std::cout << "Your number is in the index ";
+    std::cout << vidus;
+
+
+    return 0;
+}

@@ -1,0 +1,19 @@
+from queue import LifoQueue 
+  
+steks = LifoQueue(maxsize = 3) 
+   
+print(steks.qsize()) 
+   
+steks.put('a') 
+steks.put('b') 
+steks.put('c') 
+  
+print("Full: ", steks.full())  
+print("Size: ", steks.qsize())  
+   
+print('\nElements poped from the steks') 
+print(steks.get()) 
+print(steks.get()) 
+print(steks.get()) 
+  
+print("\nEmpty: ", steks.empty()) 

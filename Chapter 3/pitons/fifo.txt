@@ -1,0 +1,9 @@
+import queue
+rinda = queue.Queue()
+
+for x in range(4):
+    rinda.put(str(x))
+
+while not rinda.empty():
+    print(rinda.get(), end=" ")
+print("\n")

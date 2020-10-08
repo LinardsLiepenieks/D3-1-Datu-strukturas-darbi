@@ -1,0 +1,40 @@
+package binary.search.java;
+
+import java.util.Scanner;
+    
+    int binarySearch(int arr[], int poz, int zemais, int augstais)
+    {
+        int guess, mid = 0;
+        
+        while (zemais <= augstais)
+        {
+            mid = (zemais + augstais) / 2;
+            guess = arr[mid];
+
+            if (guess == poz)
+                break;
+
+            if (guess < poz)
+                zemais = mid + 1;
+
+            else
+                augstais = mid - 1;
+        }
+        
+        return mid;
+    }
+    
+    public static void main(String[] args) {
+        BinarySearchJava ob = new BinarySearchJava(); 
+        int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        Scanner input = new Scanner(System. in);
+        System.out.println("Your number (between 1 and 10):");
+        int poz = input. nextInt();
+        
+        if (poz < 1 || poz > 10)
+            System.exit(0);
+        
+        int indeks = ob.binarySearch(arr, poz, 0, 9); 
+        System.out.println("Your number is at indeks " + indeks);
+    }
+}

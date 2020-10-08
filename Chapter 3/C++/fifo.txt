@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void izvade(queue<int> rinda)
+{
+    while (!rinda.empty())
+    {
+        cout << rinda.front() << " ";
+        rinda.pop();
+    }
+    cout << endl;
+}
+
+int main()
+{
+    queue<int> rinda;
+
+    for (int i = 0; i < 5; i++)
+        rinda.push(i);
+
+    cout << "Elements: ";
+    izvade(rinda);
+
+    int remov = rinda.front();
+    rinda.pop();
+    cout << "Removed: " << remov << endl;
+
+    cout << "Elements: ";
+    izvade(rinda);
+
+    int head = rinda.front();
+    cout << "Head: " << head << endl;
+
+    int size = rinda.size();
+    cout << "Size: " << size;
+
+    return 0;
+}

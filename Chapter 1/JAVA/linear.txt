@@ -1,0 +1,37 @@
+package linear.search.java;
+
+import java.util.Scanner;
+
+public class LinearSearchJava {
+
+    
+    int linearSearch(int masivs[], int poz)
+    {
+        int guess = 1;
+        
+        while(true)
+        {
+            if (guess == poz)
+                break;
+            
+            guess++;
+        }
+        
+        return guess - 1;
+    }
+    
+    public static void main(String[] args) {
+        LinearSearchJava ob = new LinearSearchJava(); 
+        int masivs[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        Scanner input = new Scanner(System. in);
+        System.out.println("Your number (between 1 and 10):");
+        int poz = input. nextInt();
+        
+        if (poz < 1 || poz > 10)
+            System.exit(0);
+        
+        int index = ob.linearSearch(masivs, poz); 
+        System.out.println("Your number is at index " + index);
+    }
+    
+}

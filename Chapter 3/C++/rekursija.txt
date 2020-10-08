@@ -1,0 +1,24 @@
+#include <iostream>
+
+int faktorialis(int);
+
+int main()
+{
+    int nr;
+    std::cout<<"Enter a number: ";
+    std::cin >> nr;
+    std::cout << "factorial of your number is " << faktorialis(nr) << "\n";
+    return 0;
+}
+
+int faktorialis(int nr)
+{
+    if (nr > 1)
+    {
+        return nr*faktorialis(nr - 1);
+    }
+    else
+    {
+        return 1;
+    }
+}

@@ -1,0 +1,28 @@
+package fifo.java;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class FifoJava {
+
+    public static void main(String[] args) {
+        Queue<Integer> rinda = new LinkedList<>(); 
+  
+        for (int i = 0; i < 5; i++) 
+            rinda.add(i); 
+  
+        System.out.println("Elements: " + rinda); 
+  
+        int removedele = rinda.remove(); 
+        System.out.println("Removed: " + removedele); 
+  
+        System.out.println("Elements: " + rinda); 
+  
+        int head = rinda.peek(); 
+        System.out.println("Head: " + head); 
+  
+        int size = rinda.size(); 
+        System.out.println("Size: " + size); 
+    }
+    
+}

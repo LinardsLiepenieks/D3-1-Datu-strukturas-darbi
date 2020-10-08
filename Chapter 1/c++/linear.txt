@@ -1,0 +1,26 @@
+#include <iostream>
+
+int main()
+{
+    int masivs[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int poz, guess = 1;
+    std::cout << "Your number (between 0 and 10): ";
+    std::cin >> poz;
+
+    if (poz < 1 || poz > 10)
+        return 0;
+
+    while (1)
+    {
+        if (guess == poz)
+            break;
+
+        guess++;
+    }
+
+    std::cout << "Your number is at index ";
+    std::cout << guess - 1;
+
+
+    return 0;
+}

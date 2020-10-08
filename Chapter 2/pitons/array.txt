@@ -1,0 +1,7 @@
+
+import array as arr
+masivs = arr.array('i', [2, 4, 6, 8])
+
+print("1st element:", masivs[0])
+print("2nd element:", masivs[1])
+print("3rd element:", masivs[2])
